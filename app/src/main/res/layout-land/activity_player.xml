@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".PlayerActivity"
+    tools:layout_editor_absoluteY="73dp">
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/done"
+        android:onClick="playerDone"
+        android:text="Done"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button14"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/sitLeave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="bSit"
+        android:text="Leave"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditText" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="bStack"
+        android:text="$"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button14"
+        app:layout_constraintEnd_toStartOf="@+id/sitLeave"
+        app:layout_constraintStart_toEndOf="@+id/button12"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditText" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="bCards"
+        android:text="cards"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/p_move"
+        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditText" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/cancel"
+        android:onClick="playerBack"
+        android:text="cancel"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button15"
+        app:layout_constraintStart_toEndOf="@+id/p_move"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <!-- Stop auto focussing the EditText -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"></LinearLayout>
+
+    <TextView
+        android:id="@+id/dealerSessionText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/manila"
+        android:textAllCaps="false"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/noteEditText"
+        app:layout_constraintEnd_toStartOf="@+id/labelText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/labelText"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dealerSessionText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/p_move"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="bMove"
+        android:text="Move"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button12" />
+
+    <EditText
+        android:id="@+id/noteEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/manila"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button12"
+        app:layout_constraintEnd_toStartOf="@+id/labelText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dealerSessionText" />
+
+    <AutoCompleteTextView
+        android:id="@+id/idText"
+        android:layout_width="153dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/manila"
+        android:ems="10"
+        android:inputType="textCapCharacters"
+        android:singleLine="true"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelText" />
+
+</android.support.constraint.ConstraintLayout>

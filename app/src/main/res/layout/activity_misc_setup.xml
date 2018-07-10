@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#96e3f7"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="89dp">
+
+    <!-- Stop auto focussing the EditText -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"></LinearLayout>
+
+    <EditText
+        android:id="@+id/smallestChip"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tipThreshold"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tipThreshold"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="5"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/rakePctInt"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/smallestChip" />
+
+    <EditText
+        android:id="@+id/rakePctInt"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="20"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tipThreshold"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/rakeCapInt" />
+
+    <EditText
+        android:id="@+id/rakeCapInt"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="5"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/jackpotThreshold"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/rakePctInt" />
+
+    <EditText
+        android:id="@+id/jackpotThreshold"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/deadDropInt"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/rakeCapInt" />
+
+    <EditText
+        android:id="@+id/deadDropInt"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="10"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/jackpotThreshold" />
+
+    <CheckBox
+        android:id="@+id/jackpot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Jackpot >="
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rakeCap" />
+
+    <CheckBox
+        android:id="@+id/deadDrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Dead drop:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jackpot" />
+
+    <CheckBox
+        android:id="@+id/autoTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Tip pot >="
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <CheckBox
+        android:id="@+id/rakeCap"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Rake cap:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rakeVal" />
+
+    <CheckBox
+        android:id="@+id/rakeVal"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Rake:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoTip" />
+
+    <RadioGroup
+        android:id="@+id/oddChips"
+        android:layout_width="wrap_content"
+        android:layout_height="119dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/leftOfDealer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" To left of dealer"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/highestCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" To highest card"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/nextPot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" To next pot"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/noFlopNoDrop"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:text=" No flop no drop"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/noFlopNoJack"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:text=" No flop no jack"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/noFlopNoDrop" />
+
+    <CheckBox
+        android:id="@+id/noFlopNoTip"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:text=" No flop no tip"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/smallestChip" />
+
+    <Button
+        android:id="@+id/ve_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/cancel"
+        android:onClick="miscBack"
+        android:text="Cancel"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ve_done"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ve_done"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/done"
+        android:onClick="rakeDone"
+        android:text="Done"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ve_cancel" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="144dp"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <RadioButton
+            android:id="@+id/roundUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Up"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/roundDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Down"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/halfEven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Half to even"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/halfOdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Half to odd"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/noFlopNoTip">
+
+        <RadioButton
+            android:id="@+id/radioPct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PCT"
+            android:textSize="8sp" />
+
+        <RadioButton
+            android:id="@+id/radioFixed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fixed"
+            android:textSize="8sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Smallest chip"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Rounding"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup7" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Odd chips"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deadDrop" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/noFlopNoJack">
+
+        <RadioButton
+            android:id="@+id/radioButtonBB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="BB"
+            android:textSize="8sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button"
+            android:textSize="8sp" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="587dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

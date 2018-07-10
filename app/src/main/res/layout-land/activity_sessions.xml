@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SessionsActivity"
+    tools:layout_editor_absoluteY="72dp">
+
+    <Button
+        android:id="@+id/sessionEmail"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="email"
+        android:text="email"
+        app:layout_constraintBottom_toTopOf="@+id/sessionDone"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/sessionDel"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="delete"
+        android:text="delete"
+        app:layout_constraintBottom_toTopOf="@+id/sessionEmail"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/sessionSpinner"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/manila"
+        android:textColor="#ff000000"
+        app:layout_constraintBottom_toTopOf="@+id/noteEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Stop auto focussing the EditText -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"></LinearLayout>
+
+    <EditText
+        android:id="@+id/noteEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/manila"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toStartOf="@+id/updateSession"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sessionSpinner" />
+
+    <Button
+        android:id="@+id/sessionDone"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="sessionsDone"
+        android:text="Done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/sessionInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/manila"
+        android:maxLines="9999"
+        android:scrollbars="vertical"
+        android:textColor="#ff000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sessionEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbParams" />
+
+    <CheckBox
+        android:id="@+id/cbParams"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="cbDelta"
+        android:text="Params"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/cbSeating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <CheckBox
+        android:id="@+id/cbSeating"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="cbDelta"
+        android:text="Seating"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/cbXfers"
+        app:layout_constraintStart_toEndOf="@+id/cbParams"
+        app:layout_constraintTop_toBottomOf="@+id/button13" />
+
+    <CheckBox
+        android:id="@+id/cbHands"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="cbDelta"
+        android:text="Hands"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/sessionDel"
+        app:layout_constraintStart_toEndOf="@+id/cbXfers"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <CheckBox
+        android:id="@+id/cbXfers"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="cbDelta"
+        android:text="Xfers"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/cbHands"
+        app:layout_constraintStart_toEndOf="@+id/cbSeating"
+        app:layout_constraintTop_toBottomOf="@+id/button18" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="toTop"
+        android:text="&lt;&lt;"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/cbParams"
+        app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteEdit" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="toLast"
+        android:text="&gt;&gt;"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/cbHands"
+        app:layout_constraintEnd_toStartOf="@+id/sessionDel"
+        app:layout_constraintStart_toEndOf="@+id/button18"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="upOne"
+        android:text="&lt;"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/cbSeating"
+        app:layout_constraintEnd_toStartOf="@+id/button18"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/noteEdit" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="downOne"
+        android:text="&gt;"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/cbXfers"
+        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintStart_toEndOf="@+id/button13"
+        app:layout_constraintTop_toBottomOf="@+id/noteEdit" />
+
+    <Button
+        android:id="@+id/updateSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="updateNote"
+        android:text="&lt;-update"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sessionSpinner" />
+
+</android.support.constraint.ConstraintLayout>

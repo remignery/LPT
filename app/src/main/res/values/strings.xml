@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">LPT</string>
+
+    <string name="title_activity_table">TableActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="LPT_help">Hello blank fragment</string>
+    <string name="title_activity_help">LPT Help</string>
+    <string name="about_LPT">
+        "<i>Track and record live Hold\'em poker "
+        "sessions with a minimum of button presses.</i>"
+    </string>
+    <string name="help_text">
+       <![CDATA[
+        "<i>The LPT main menu provides the following options:</i><br><br>"
+        "<ul><li><b>HELP</b> - displays this help.<br></li>"
+        "<li><b>START NEW SESSION</b> - presents the Game Setup screen described below for a new Hold\'em session."
+        "Exiting this screen (after any desired changes), presents the Table screen described below.<br></li>"
+        "<li><b>RESUME SESSION</b> - continues the last session.<br></li>"
+        "<li><b>REVIEW SESSION DATA</b> - presents the Session review screen described below.<br></li>"
+        "<li><b>REVIEW PLAYER DATA</b> - presents the Player review screen described below.<br></li>"
+        "<li><b>EXIT</b> - exits the app.</li></ul><br>"
+
+        "<b>TABLE SCREEN</b><br>"
+        "The Table Screen presents a depiction of an actual 10 seat poker table, "
+        "two seats per side, four seats in the corners, and a seat at either end. "
+        "the actual dealer is marked by a notch at one side while the nominal dealer is marked by "
+        "a moveable dealer button.<br><br>If you are seated on the ends of the table, hold the phone or tablet vertically, "
+        "otherwise hold it horizontally.  With yourself to be seated at the bottom of the screen, touch the "
+        "dealer notch if necessary to toggle its position to match the position of the actual dealer "
+        "so that the seat numbers correspond (1 to 10 from the left of the dealer).<br><br>"
+        "Initially all seats will be setup as occupied with a max buy-in stack."
+        "The table will always be in one of three modes as indicated by the color of the felt.<br> "
+        "__Green is the default and indicates the table is ready for or in a hand.<br>"
+        "__Red indicates that a non-hand action will be initiated when a seat button, the "
+        "middle of the table, or the dealer button is then touched.<BR>"
+        "__Yellow indicates that a seat should then be touched to complete certain actions described below.<br><br>"
+        "The table felt goes from green to red when the center of the table is touched. "
+        "You should then touch a seat button, the dealer button, or the center of the table a "
+        "second time to initiate the desired action:<br>"
+        "__Touching a seat button will then take you to the Player Setup screen described below.<br>"
+        "__Touching the dealer button will then take you to the Dealer screen described below.<br>"
+        "__Touching the table center will take you to the Game Setup screen described below.<br><br>"
+
+        "Game play is initiated (after players have been updated if necessary) by touching the Dealer button "
+        "and then touching a player.  The dealer button will then move to the player, blinds will be posted, "
+        "and active player buttons will turn yellow, except green for the big blind since their action "
+        "is currently complete. Touching any yellow button will present the Action screen where "
+        "selection to fold, call or raise may be made for the selected player.  That player\'s button will then "
+        "go green to indicate that the bet has been met (or orange if all-in short of the bet), or "
+        "grey if folded. Note that players between the last touched and the current are automatically checked or folded "
+        "so that folding, while presented as an option, never needs to be done explicitly (unless a player actually folds a check)."
+        "Touching a green button (a player who has met the bet) or when all unfolded player buttons become green "
+        ends the street (except for the big blind when they have the option).<br><br>"
+
+        "When a street ends with callers, the card selection screen appears for selecting the flop, turn, or river cards "
+        "as appropriate and the betting round repeats.  If and when the hand reaches showdown, touching active players "
+        "will then bring up the Card Selection screen for selecting hole cards (with a muck option). "
+        "When all necessary hole cards have been selected or mucked, (or whenever there are no callers) the pot is then "
+        "automatically distributed to the winners ending the hand (unless the manual distribution option "
+        "has been chosen).<br><br>"
+
+        "<b>GAME SETUP SCREEN</b><br>"
+        "The <b>Game Setup screen</b> displays the current option settings and provides these buttons "
+        "for editing them:<br>"
+        "GAME SELECTION - presents the Game Selection screen<br>"
+        "__to select either Texas or Omaha hold\'em,<br>"
+        "__to select among limit, pot limit, and no limit,<br>"
+        "__to select among high hand wins, low hand wins or high and low hands split the pot,<br>"
+        "__to enable or disable manual pot distribution.<br>"
+        "ANTE, BLINDS & BUY IN - presents a screen to edit those values.<br>"
+        "RAKE & MISC. - presents a screen to edit, rake, tipping, and other options.  All option values "
+        "are retained when the app is terminated.<br>"
+        "HISTORY - presents the Sessions Review screen described below.<br><br>"
+        "Additionally the user may annotate the current session in this screen.  Each annotation is saved as "
+        "a separate event in the tracking database and is distinct from the single annotation "
+        "available on the Sessions Review screen.<br><br>"
+
+        "<b>PLAYER SETUP SCREEN</b><br>"
+        "The <b>Player Setup screen</b> displays the current player statistics for the selected player "
+        "and provides controls for seating, unseating, moving, naming, or annotating the player and for recording hole "
+        "cards or transferring funds to the pot, the dealer, their own stack, or to the stack of "
+        "another player.  Naming a player will cause their statistics to be copied from and saved to the "
+        "tracking database.  A name may be either be typed in new or selected from a list of player names in the database. "
+        "To move a player or transfer funds to another player, the user is "
+        "returned to the Table screen (yellow felt) to then pick the target seat.  If moving to a seat already "
+        "occupied, the player seats are swapped.  Note that only "
+        "one annotation is available per player and will be overwritten if edited.<br><br>"
+
+        "<b>DEALER SCREEN</b><br>"
+        "The <b>Dealer screen</b> displays the current session statistics and rake, jackpot, and tip values "
+        "for the current dealer and for the session as a whole. It also provides controls for "
+        "naming the current dealer, transferring funds to tips, the pot, the jackpot, or to the stack of "
+        "another player, redealing board cards, and aborting the current hand.  To transfer funds to a player, the user is "
+        "returned to the Table screen (yellow felt) to then pick the target player.<br><br>"
+
+        "<b>SESSION REVIEW SCREEN</b><br>"
+        "The <b>Session Review screen</b> displays a drop-down list of all the sessions in the database "
+        "defaulting to the current session and provides controls to annotate, delete and upload "
+        "individual sessions.  Uploading requires an active email client on the device.<br><br>"
+        "Session data includes all events during a session including setup, seatings, transfers, comments, "
+        "dealer changes, and, of course, hands, all with time stamps.  The terse syntax of hand data generally "
+        "follows the form &lt;seatnumber&gt;&lt;action&gt;&lt;value&gt; where action may be: S=small blind B=big blind C=call "
+        "R=raise +=to stack, etc.. Isolated negative values represent rakes, tips and jackpots.<br><br>"
+
+        "<b>PLAYER REVIEW SCREEN</b><br>"
+        "The <b>Player Review screen</b> displays a drop-down list of all the named players in the database "
+        "with their statistics and provides controls to annotate, delete and upload "
+        "individual player data.  Uploading requires an active email client on the device.<br><br>"
+
+        "<b>CARD SELECTION SCREEN</b><br>"
+        "The <b>Card Selection screen</b> allow the quick selection of card ranks and suits for the "
+        "number of cards indicated.  Ranks and suits may be chosen in any order, the current selection "
+        "displaying on the Return button. Note that the rank and suit roll over with repeated selections "
+        "to allow corrections.  Ranks and suits must be indicated for board cards but suits are optional for  "
+        "hole cards so that, for instance if flushes were not possible, indicating suit would not be "
+        "necessary.  For hole card entry the X button indicates a muck.<br><br>"
+
+        "<b>Miscellany</b><br>"
+        "Most actions can be cancelled when done in error or by oversight. A player accidently folded can be touched to "
+        "be brought back into the hand.  Board card selection can be cancelled with the &lt; button or corrected "
+        "with the redeal button on the dealer screen. "
+        "Yellow felt actions can be cancelled by touching the table center, etc..  Finally manual fund "
+        "transfers can be employed to correct all wrongs and/or accomodate exotic game variations.<br><br>"
+
+        "The manual distributions option exists to accomodate exotic forms of Hold\'em. When not "
+        "active, pots, including possible side-pots, are distributed according to the rules of the selected "
+        "game.  When active, the user must specify the pot winner by touching their button. For multiple winners, before distribution "
+        "each touch of the center of the table increments the number of winners and causes the pot to split accordingly. "
+        "An equal number of player button touches then distributes the winnings where a single player can be "
+        "touched more than once if necessary.<br><br>"
+
+        "The cards button on the Player Setup screen is intended for recording your own hole cards for folded hands if "
+        "desired or for when other players reveal cards outside of showdown.<br><br>
+
+        "The rake, auto tip and jackpot total for the current hand is displayed on the dealer notch.<br>"
+    ]]>
+    </string>
+    <string name="action_settings">Settings</string>
+</resources>
